@@ -209,7 +209,7 @@ body {
     background: #fff;
     z-index: 0;
     overflow: auto;
-    border-bottom: 1px solid #c1c1c1;
+    border-bottom: 1px solid #f1f1f1;
 
     .list-chat {
       flex: 0 0 calc(100%);
@@ -249,11 +249,48 @@ body {
         margin-left: auto;
         max-width: 60%;
       }
+    }
+    .typing {
+      background: #f1f1f1;
+      height: 30px;
+      width: fit-content;
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+      margin-left: 1em;
+      margin-bottom: 10px;
 
-      .typing .text-chat {
-        background: #f1f1f1;
-        padding: 5px 10px;
-        border-radius: 30px;
+      .loader {
+        width: 5px;
+        height: 5px;
+        border-radius: 100%;
+        background: #c1c1c1;
+        margin: 0 2px;
+      }
+
+      @keyframes loader1 {
+        0% {
+          margin-bottom: 0px;
+        }
+        50% {
+          margin-bottom: 6px;
+        }
+        100% {
+          margin-bottom: 0px;
+        }
+      }
+
+      .item-1 {
+        animation: loader1 1.3s linear infinite;
+      }
+      .item-2 {
+        animation: loader1 1.3s linear infinite;
+        animation-delay: 0.5s;
+      }
+      .item-3 {
+        animation: loader1 1.3s linear infinite;
+        animation-delay: 0.8s;
       }
     }
   }

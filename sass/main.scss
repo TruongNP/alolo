@@ -1,0 +1,305 @@
+body {
+  padding: 0;
+  margin: 0;
+  background: #fff;
+  font-family: Sans-serif;
+}
+
+.alolo-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+
+  .alolo-row {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    .form {
+      position: relative;
+      width: 80%;
+      height: auto;
+      margin: auto;
+      margin-top: 40px;
+
+      .form-messge {
+        position: relative;
+        width: 100%;
+        font-size: 24px;
+        color: #363636;
+        text-align: center;
+        margin-bottom: 20px;
+        padding: 10px 0px;
+      }
+
+      .form-group {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-column-gap: 0;
+        grid-row-gap: 20px;
+        margin-bottom: 20px;
+
+        .form-item {
+          .form-control {
+            position: relative;
+            width: 100%;
+            font-size: 14px;
+            color: #363636;
+            outline: none;
+            padding: 5px;
+            border: none;
+            border-bottom: 1px solid #f1f1f1;
+          }
+
+          .form-error {
+            position: relative;
+            width: 100%;
+            font-size: 12px;
+            color: #de1e1e;
+            padding: 10px 5px;  
+          }
+
+          &.submit {
+            display: flex;
+            align-items: center;
+            margin: auto;
+          }
+
+          .form-submit {
+            font-size: 14px;
+            font-weight: 700;
+            border: none;
+            padding: 5px 15px;
+            height: 40px;
+            outline: none;
+            border-radius: 5px;
+            background: #0084ff;
+            color: #fff;
+            cursor: pointer;
+            transition: 0.3s ease-in-out;
+
+            &:hover {
+              background: #017bee;
+            }
+          }
+
+          .form-link {
+            font-size: 14px;
+            font-weight: 700;
+            outline: none;
+            color: #0084ff;
+            margin-left: 10px;
+            cursor: pointer;
+          }
+        }
+
+        .forget-password {
+          width: fit-content;
+          font-size: 14px;
+          font-weight: 300;
+          margin: auto;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+/*style dashboard */
+
+.dashboard {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  .header {
+    position: relative;
+    background: #0084ff;
+    display: flex;
+    align-items: center;
+    padding: 0.5em 1em;
+    z-index: 1;
+
+    .header-item {
+      flex: 0 0 calc(50%);
+
+      .user {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        .back-icon {
+          position: relative;
+          color: #fff;
+          padding: 0;
+          font-size: 20px;
+          margin-right: 15px;
+          cursor: pointer;
+        }
+
+        .avata {
+          position: relative;
+          width: 30px;
+          height: 30px;
+          border-radius: 100%;
+          border: 3px solid #fff;
+        }
+
+        .user-name {
+          font-size: 14px;
+          color: #fff;
+          padding-left: 5px;
+        }
+      }
+
+      .select-option {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: fit-content;
+        margin-left: auto;
+
+        .ellipsis-v-icon {
+          font-size: 14px;
+          color: #fff;
+          cursor: pointer;
+
+          &:hover ~ .list-option {
+            display: block;
+          }
+        }
+
+        .list-option {
+          list-style: none;
+          position: absolute;
+          width: fit-content;
+          font-size: 14px;
+          background: #fff;
+          border-radius: 5px;
+          top: 0;
+          right: 5px;
+          padding: 0;
+          overflow: hidden;
+          display: none;
+
+          .option {
+            position: relative;
+            color: #c9c4c4;
+            font-weight: 100;
+            padding: 4px 20px;
+            transition: 0.3s ease-in-out;
+
+            &:hover {
+              background: #f1f1f1;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .content-chat {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    top: 0;
+    height: 94vh;
+    background: #fff;
+    z-index: 0;
+    overflow: auto;
+    border-bottom: 1px solid #c1c1c1;
+
+    .list-chat {
+      flex: 0 0 calc(100%);
+
+      .chat-item {
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+        font-size: 14px;
+        padding: 0 1em;
+      }
+
+      .reply-user {
+        .text-chat {
+          background: #f1f1f1;
+          padding: 10px;
+          border-radius: 30px;
+          max-width: 60%;
+        }
+
+        .reply-avt {
+          position: relative;
+          width: 20px;
+          height: 20px;
+          border-radius: 100%;
+          border: 2px solid #0084ff;
+          color: #363636;
+          margin-right: 5px;
+        }
+      }
+
+      .current-user .text-chat {
+        background: #0084ff;
+        padding: 10px;
+        border-radius: 30px;
+        color: #fff;
+        margin-left: auto;
+        max-width: 60%;
+      }
+
+      .typing .text-chat {
+        background: #f1f1f1;
+        padding: 5px 10px;
+        border-radius: 30px;
+      }
+    }
+  }
+
+  .form-chat {
+    position: absolute;
+    width: 100%;
+    height: 6vh;
+    bottom: 0;
+
+    .form-chat-content {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      padding: 0 1em;
+    }
+  }
+}
+
+/* style content chat */
+
+/* style sidebar */
+
+#messeges {
+  position: relative;
+  width: 90%;
+  height: 70%;
+  border: none;
+  font-size: 14px;
+  color: #363636;
+  background: #f1f1f1;
+  padding: 0 1em;
+  border-radius: 30px;
+  outline: none;
+}
+
+#btn-submit {
+  position: relative;
+  width: 10%;
+  height: 70%;
+  border: none;
+  font-size: 20px;
+  color: #0084ff;
+  background: #fff;
+  border-radius: 30px;
+  padding: 0;
+  outline: none;
+  text-align: right;
+}

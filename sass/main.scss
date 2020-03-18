@@ -165,36 +165,6 @@ body {
           font-size: 14px;
           color: #fff;
           cursor: pointer;
-
-          &:hover ~ .list-option {
-            display: block;
-          }
-        }
-
-        .list-option {
-          list-style: none;
-          position: absolute;
-          width: fit-content;
-          font-size: 14px;
-          background: #fff;
-          border-radius: 5px;
-          top: 0;
-          right: 5px;
-          padding: 0;
-          overflow: hidden;
-          display: none;
-
-          .option {
-            position: relative;
-            color: #c9c4c4;
-            font-weight: 100;
-            padding: 4px 20px;
-            transition: 0.3s ease-in-out;
-
-            &:hover {
-              background: #f1f1f1;
-            }
-          }
         }
       }
     }
@@ -312,7 +282,6 @@ body {
 
 /* style content chat */
 
-/* style sidebar */
 
 #messeges {
   position: relative;
@@ -339,4 +308,100 @@ body {
   padding: 0;
   outline: none;
   text-align: right;
+}
+
+/*style sidebar */
+
+.side-bar {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  .my-account {
+    position: relative;
+    background: #0084ff;
+    display: flex;
+    align-items: center;
+    padding: 0.5em 1em;
+    z-index: 1;
+
+    .account-item {
+      flex: 0 0 calc(50%);
+
+      .current-account {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        .avata {
+          position: relative;
+          width: 30px;
+          height: 30px;
+          border-radius: 100%;
+          border: 3px solid #fff;
+        }
+
+        .user-name {
+          font-size: 14px;
+          color: #fff;
+          padding-left: 5px;
+        }
+      }
+
+      .select-option {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: fit-content;
+        margin-left: auto;
+
+        .pencil-icon {
+          font-size: 14px;
+          color: #fff;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .side-bar-search {
+    position: relative;
+    width: 100%;
+    height: 6vh;
+    bottom: 0;
+
+    .search-content {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      padding: 0 1em;
+
+      #search-messeges {
+        position: relative;
+        width: 90%;
+        height: 70%;
+        border: none;
+        font-size: 14px;
+        color: #363636;
+        background: #f1f1f1;
+        padding: 0 1em;
+        border-radius: 30px;
+        outline: none;
+      }
+      
+      #btn-search-submit {
+        position: relative;
+        width: 10%;
+        height: 70%;
+        border: none;
+        font-size: 20px;
+        color: #0084ff;
+        background: #fff;
+        border-radius: 30px;
+        padding: 0;
+        outline: none;
+        text-align: right;
+      }
+    }
+  }
 }
